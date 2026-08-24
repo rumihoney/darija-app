@@ -5,6 +5,8 @@ body {
   height: 100vh;
   overflow: hidden;
 
+  font-family: "Tajamuka", serif;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,7 +15,7 @@ body {
 .quiz {
   width: 600px;
   text-align: center;
-  border: 1px solid #8dc9f1;
+  border: 10px solid #12e034;
   border-radius: 20px;
   padding: 20px;
 
@@ -21,7 +23,7 @@ body {
 }
 
 h1 {
-  font-size: 60px;
+  font-size: 80px;
   margin: 0 0 25px 0;
 }
 
@@ -51,6 +53,11 @@ h1 {
 }
 
 @font-face {
+  font-family: "Tajamuka";
+  src: url("./fonts/Tajamuka Script.ttf") format("truetype");
+}
+
+@font-face {
   font-family: "Lemon Brush";
   src: url("./fonts/LemonBrushRegular.otf") format("opentype");
 }
@@ -70,13 +77,12 @@ h1 {
 }
 
 .latin {
-  font-family: Arial, sans-serif;
-  font-size: 42px;
-
+  font-family: "Tajamuka", serif;
+  font-size: 50px;
   line-height: 1;
   margin-top: 5px;
 }
 
 .answer:hover {
-  background: #7558ac;
+  background: #f0188f;
 }
