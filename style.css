@@ -39,26 +39,17 @@ h1 {
   cursor: pointer;
 }
 
-.red {
-  border-color: #c92f35;
+.border {
+  border-color: #ee8df1;
 }
 
-.purple {
-  border-color: #55569b;
-}
-
-@font-face {
-  font-family: "Sinbad";
-  src: url("./fonts/SinbadtheSailor.ttf"t") format("truetype");
-}
 .arabic {
-  font-family: "Sinbad", sans-serif;
   font-size: 42px;
   font-weight: normal;
 }
 
 .latin {
-  font-size: 42px;
+  font-size: 30px;
 }
 
 .answer:hover {
