@@ -97,17 +97,12 @@ h1 {
 
   border: 3px solid #f0188f;
   border-radius: 20px;
-  
-  box-shadow: 6px 6px 0 #12e034;
-  transform: rotate(-1deg);
 
   padding: 10px 35px;
 }
 
 .start-button:hover {
   background: #f0188f;
-  box-shadow: 3px 3px 0 #12e034;
-  transform: translate(3px, 3px) rotate(-1deg);
 }
 
 /* quiz page */
@@ -198,7 +193,7 @@ h1 {
   background: #000;
   color: #f4eddf;
 
-  border: 3px solid #8dc9f1;
+  border: 3px solid #f4eddf;
   border-radius: 20px;
 
   padding: 8px 30px;
@@ -208,7 +203,7 @@ h1 {
 }
 
 #continue-btn:hover {
-  background: #7558ac;
+  background: #f0188f;
 }
 
 
@@ -259,7 +254,7 @@ h1 {
 }
 
 .unit:hover {
-  background: #7558ac;
+  background: #f0188f;
 }
 
 .unit.locked {
