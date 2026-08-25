@@ -13,17 +13,18 @@ body {
 }
 
 .quiz {
-  width: 600px;
+  width: min(600px, 92vw);
   text-align: center;
+
   border: 10px solid #12e034;
   border-radius: 20px;
-  padding: 20px;
 
+  padding: 20px;
   box-sizing: border-box;
 }
 
 h1 {
-  font-size: 80px;
+  font-size: clamp(45px, 7vw, 80px);
   margin: 0 0 25px 0;
 }
 
@@ -37,8 +38,8 @@ h1 {
   background: #000;
   color: #f4eddf;
 
-  height: 180px;
-  padding: 15px 35px;
+  min-height: 160px;
+  padding: 15px 20px;
   box-sizing: border-box;
 
   border: 3px solid;
@@ -64,7 +65,7 @@ h1 {
 
 .arabic {
   font-family: "Lemon Brush", sans-serif;
-  font-size: 70px;
+  font-size: clamp(45px, 6vw, 70px);
   font-weight: normal;
 
   height: 90px;
@@ -78,11 +79,52 @@ h1 {
 
 .latin {
   font-family: "Tajamuka", serif;
-  font-size: 50px;
+  font-size: clamp(32px, 4vw, 50px);
+
   line-height: 1;
   margin-top: 5px;
 }
 
 .answer:hover {
   background: #f0188f;
+}
+
+#feedback {
+  font-size: clamp(25px, 3vw, 35px);
+  margin: 15px 0 0 0;
+}
+
+#continue-btn {
+  font-family: "Tajamuka", serif;
+  font-size: clamp(28px, 3vw, 35px);
+
+  background: #000;
+  color: #f4eddf;
+
+  border: 3px solid #8dc9f1;
+  border-radius: 20px;
+
+  padding: 8px 30px;
+  margin-top: 15px;
+
+  cursor: pointer;
+}
+
+#continue-btn:hover {
+  background: #7558ac;
+}
+
+@media (max-width: 700px) {
+  .quiz {
+    padding: 15px;
+  }
+
+  .answers {
+    gap: 12px;
+  }
+
+  .answer {
+    min-height: 140px;
+    padding: 10px 15px;
+  }
 }
