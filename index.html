@@ -1,52 +1,38 @@
+<!-- welcome page / front page -->
+
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Learn Darija</title>
+
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <div class="quiz">
+  <main class="welcome">
 
-    <h1 id="question">
-      How do you say<br>"hello" in Darija?
-    </h1>
+    <h1>Welcome</h1>
 
-    <div class="answers">
-
-      <button class="answer" data-answer="salam">
-        <span class="arabic">سلام</span>
-        <span class="latin">salam</span>
-      </button>
-
-      <button class="answer" data-answer="shukran">
-        <span class="arabic">شكرا</span>
-        <span class="latin">shukran</span>
-      </button>
-
-      <button class="answer" data-answer="bslama">
-        <span class="arabic">بسلامة</span>
-        <span class="latin">bslama</span>
-      </button>
-
-      <button class="answer" data-answer="fin">
-        <span class="arabic">فين</span>
-        <span class="latin">fin</span>
-      </button>
-
+    <div class="welcome-translation">
+        <span class="welcome-arabic">مرحبا</span>
+        <span class="welcome-latin">marhaba</span>
     </div>
 
-    <p id="feedback">Select the correct answer</p>
+    <p class="welcome-text">
+      Learn Moroccan Darija one lesson at a time.
+    </p>
 
-    <button id="continue-btn" hidden>Continue</button>
+    <a href="units.html" class="start-button">
+      Start Learning
+    </a>
 
-  </div>
-
-  <script src="script.js"></script>
+  </main>
 
 </body>
 

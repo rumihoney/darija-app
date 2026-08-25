@@ -1,3 +1,18 @@
+/* fonts */
+
+@font-face {
+  font-family: "Tajamuka";
+  src: url("./fonts/Tajamuka Script.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Lemon Brush";
+  src: url("./fonts/LemonBrushRegular.otf") format("opentype");
+}
+
+
+/* general */
+
 body {
   margin: 0;
   background: #000;
@@ -12,6 +27,91 @@ body {
   align-items: center;
 }
 
+h1 {
+  font-size: clamp(45px, 7vw, 80px);
+  margin: 0 0 25px 0;
+}
+
+
+/* welcome page */
+
+.welcome {
+  width: min(600px, 92vw);
+  text-align: center;
+
+  border: 10px solid #12e034;
+  border-radius: 20px;
+
+  padding: 50px;
+  box-sizing: border-box;
+}
+
+.welcome h1 {
+  font-size: 90px;
+  margin: 0;
+}
+
+.welcome-translation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 10px;
+  margin: 20px 0 30px;
+}
+
+.welcome-arabic {
+  font-family: "Lemon Brush", sans-serif;
+  font-size: 100px;
+  color: #f0188f;
+
+  line-height: 1;
+  margin: 0;
+
+  transform: scale(1.5);
+}
+
+.welcome-latin {
+  font-family: "Tajamuka", serif;
+  font-size: 65px;
+  color: #ec419f;
+
+  line-height: 1;
+  margin: 0;
+}
+
+.welcome-text {
+  font-size: 40px;
+  margin: 20px 0;
+}
+
+.start-button {
+  display: inline-block;
+
+  font-family: "Tajamuka", serif;
+  font-size: 40px;
+
+  color: #f4eddf;
+  text-decoration: none;
+
+  border: 3px solid #f0188f;
+  border-radius: 20px;
+  
+  box-shadow: 6px 6px 0 #12e034;
+  transform: rotate(-1deg);
+
+  padding: 10px 35px;
+}
+
+.start-button:hover {
+  background: #f0188f;
+  box-shadow: 3px 3px 0 #12e034;
+  transform: translate(3px, 3px) rotate(-1deg);
+}
+
+/* quiz page */
+
 .quiz {
   width: min(600px, 92vw);
   text-align: center;
@@ -23,10 +123,8 @@ body {
   box-sizing: border-box;
 }
 
-h1 {
-  font-size: clamp(45px, 7vw, 80px);
-  margin: 0 0 25px 0;
-}
+
+/* answers */
 
 .answers {
   display: grid;
@@ -53,15 +151,12 @@ h1 {
   cursor: pointer;
 }
 
-@font-face {
-  font-family: "Tajamuka";
-  src: url("./fonts/Tajamuka Script.ttf") format("truetype");
+.answer:hover {
+  background: #f0188f;
 }
 
-@font-face {
-  font-family: "Lemon Brush";
-  src: url("./fonts/LemonBrushRegular.otf") format("opentype");
-}
+
+/* answer text */
 
 .arabic {
   font-family: "Lemon Brush", sans-serif;
@@ -85,14 +180,16 @@ h1 {
   margin-top: 5px;
 }
 
-.answer:hover {
-  background: #f0188f;
-}
+
+/* feedback */
 
 #feedback {
   font-size: clamp(25px, 3vw, 35px);
   margin: 15px 0 0 0;
 }
+
+
+/* continue button */
 
 #continue-btn {
   font-family: "Tajamuka", serif;
@@ -114,7 +211,86 @@ h1 {
   background: #7558ac;
 }
 
+
+/* units page */
+
+.units-page {
+  width: min(700px, 92vw);
+  text-align: center;
+}
+
+.units-page h1 {
+  font-size: 70px;
+  margin: 0 0 30px 0;
+}
+
+.unit-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.unit {
+  background: #000;
+  color: #f4eddf;
+
+  min-height: 120px;
+  padding: 20px;
+  box-sizing: border-box;
+
+  border: 3px solid #f0188f;
+  border-radius: 20px;
+
+  text-decoration: none;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.unit span {
+  font-size: 25px;
+}
+
+.unit strong {
+  font-size: 40px;
+  font-weight: normal;
+}
+
+.unit:hover {
+  background: #7558ac;
+}
+
+.unit.locked {
+  opacity: 0.4;
+}
+
+.unit.locked small {
+  font-size: 20px;
+}
+
+
+/* responsive */
+
 @media (max-width: 700px) {
+
+  .welcome {
+    padding: 25px;
+  }
+
+  .welcome-translation {
+    gap: 3px;
+  }
+
+  .welcome-arabic {
+    font-size: 75px;
+  }
+
+  .welcome-latin {
+    font-size: 50px;
+  }
+
   .quiz {
     padding: 15px;
   }
