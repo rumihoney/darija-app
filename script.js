@@ -1,46 +1,80 @@
+// lesson logic
+
 const answers = document.querySelectorAll(".answer");
 const continueButton = document.querySelector("#continue-btn");
 const feedback = document.querySelector("#feedback");
 
-const correctAnswer = "salam";
+if (answers.length > 0) {
 
-let answered = false;
+  const correctAnswer = "salam";
 
-answers.forEach(function(answer) {
+  let answered = false;
 
-  answer.addEventListener("click", function() {
+  answers.forEach(function(answer) {
 
-    if (answered) {
-      return;
-    }
+    answer.addEventListener("click", function() {
 
-    const selectedAnswer = answer.dataset.answer;
+      if (answered) {
+        return;
+      }
 
-    if (selectedAnswer === correctAnswer) {
+      const selectedAnswer = answer.dataset.answer;
 
-      answer.style.backgroundColor = "#1d7be7";
+      if (selectedAnswer === correctAnswer) {
 
-      feedback.textContent = "Correct!";
-      feedback.style.color = "#1d7be7";
+        answer.style.backgroundColor = "#1d7be7";
 
-      answered = true;
-      continueButton.hidden = false;
+        feedback.textContent = "Correct!";
+        feedback.style.color = "#1d7be7";
 
-    } else {
+        answered = true;
+        continueButton.hidden = false;
 
-      answer.style.backgroundColor = "#e92727";
+      } else {
 
-      feedback.textContent = "Wrong answer!";
-      feedback.style.color = "#e92727";
+        answer.style.backgroundColor = "#e92727";
 
-      setTimeout(function() {
-        answer.style.backgroundColor = "#000";
-        feedback.textContent = "Try again!";
-        feedback.style.color = "#f4eddf";
-      }, 1000);
+        feedback.textContent = "Wrong answer!";
+        feedback.style.color = "#e92727";
 
-    }
+        setTimeout(function() {
+
+          answer.style.backgroundColor = "#000";
+
+          feedback.textContent = "Try again!";
+          feedback.style.color = "#f4eddf";
+
+        }, 1000);
+
+      }
+
+    });
 
   });
 
-});
+}
+
+
+// alphabet unit
+
+const alphabetContainer = document.getElementById("alphabet");
+
+if (alphabetContainer) {
+
+  units.unit1.letters.forEach(function(letter) {
+
+    const letterCard = document.createElement("div");
+
+    letterCard.classList.add("letter-card");
+
+    letterCard.innerHTML = `
+      <span class="arabic">${letter.arabic}</span>
+      <span class="latin">${letter.latin.join(" / ")}</span>
+      <span class="ipa">${letter.ipa.join(" / ")}</span>
+    `;
+
+    alphabetContainer.appendChild(letterCard);
+
+  });
+
+}
