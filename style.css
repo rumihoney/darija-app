@@ -1,15 +1,25 @@
 /* fonts */
 
+/* free of use*/
 @font-face {
   font-family: "Tajamuka";
   src: url("./fonts/Tajamuka Script.ttf") format("truetype");
 }
 
 @font-face {
+    font-family: "Blaka";
+    src: url("./fonts/blaka-ink-regular.ttf") format("truetype");
+}
+/* need to pay license for commercial use*/
+@font-face {
   font-family: "Lemon Brush";
   src: url("./fonts/LemonBrushRegular.otf") format("opentype");
 }
 
+@font-face {
+    font-family: "Retro Brush";
+    src: url("./fonts/RetroBrushRegular.otf") format("opentype");
+}
 
 /* general */
 
@@ -66,7 +76,7 @@ h1 {
   font-size: 100px;
   color: #f0188f;
 
-  line-height: 1;
+  line-height: 1.5;
   margin: 0;
 
   transform: scale(1.5);
