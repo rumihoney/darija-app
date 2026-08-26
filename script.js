@@ -78,3 +78,23 @@ if (alphabetContainer) {
   });
 
 }
+
+// page navigation
+
+function showPage(pageId) {
+
+  document.querySelectorAll("main").forEach(function(page) {
+    page.hidden = true;
+  });
+
+  document.getElementById(pageId).hidden = false;
+
+  const navigation = document.getElementById("navigation");
+
+  if (pageId === "welcome-page") {
+    navigation.hidden = true;
+  } else {
+    navigation.hidden = false;
+  }
+
+}

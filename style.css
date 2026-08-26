@@ -4,21 +4,26 @@
 @font-face {
   font-family: "Tajamuka";
   src: url("./fonts/Tajamuka Script.ttf") format("truetype");
+  font-display: block;
 }
 
 @font-face {
     font-family: "Blaka";
     src: url("./fonts/blaka-ink-regular.ttf") format("truetype");
+    font-display: block;
 }
+
 /* need to pay license for commercial use*/
 @font-face {
   font-family: "Lemon Brush";
   src: url("./fonts/LemonBrushRegular.otf") format("opentype");
+  font-display: block;
 }
 
 @font-face {
     font-family: "Retro Brush";
     src: url("./fonts/RetroBrushRegular.otf") format("opentype");
+    font-display: block;
 }
 
 /* general */

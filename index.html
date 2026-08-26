@@ -1,38 +1,172 @@
-<!-- welcome page / front page -->
+<!-- darija app -->
 
 <!DOCTYPE html>
 
 <html lang="en">
 
 <head>
+
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Darija Units</title>
+  <title>Learn Darija</title>
 
   <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-  <main class="welcome">
+  <!-- welcome page -->
+
+  <main class="welcome" id="welcome-page">
 
     <h1>Welcome</h1>
 
     <div class="welcome-translation">
-        <span class="welcome-arabic">مرحبا</span>
-        <span class="welcome-latin">marhaba</span>
+      <span class="welcome-arabic">مرحبا</span>
+      <span class="welcome-latin">marhaba</span>
     </div>
 
     <p class="welcome-text">
       Learn Moroccan Darija one lesson at a time.
     </p>
 
-    <a href="units/unit_selection.html" class="start-button">
+    <button class="start-button" onclick="showPage('unit-selection')">
       Start Learning
-    </a>
+    </button>
 
   </main>
+
+
+  <!-- unit selection -->
+
+  <main class="units-page" id="unit-selection" hidden>
+
+    <h1>Choose a Unit</h1>
+
+    <div class="unit-list">
+
+      <button class="unit" onclick="showPage('alphabet-page')">
+        <span>Unit 1</span>
+        <strong>Alphabet</strong>
+      </button>
+
+      <button class="unit" onclick="showPage('first-words-page')">
+        <span>Unit 2</span>
+        <strong>First Words</strong>
+      </button>
+
+      <div class="unit locked">
+        <span>Unit 3</span>
+        <strong>People</strong>
+        <small>Coming soon</small>
+      </div>
+
+      <div class="unit locked">
+        <span>Unit 4</span>
+        <strong>Food & Drink</strong>
+        <small>Coming soon</small>
+      </div>
+
+      <div class="unit locked">
+        <span>Unit 5</span>
+        <strong>Everyday Darija</strong>
+        <small>Coming soon</small>
+      </div>
+
+      <div class="unit locked">
+        <span>Unit 6</span>
+        <strong>Home</strong>
+        <small>Coming soon</small>
+      </div>
+
+      <div class="unit locked">
+        <span>Unit 7</span>
+        <strong>Shopping</strong>
+        <small>Coming soon</small>
+      </div>
+
+    </div>
+
+  </main>
+
+
+  <!-- unit 1: alphabet -->
+
+  <main class="alphabet-page" id="alphabet-page" hidden>
+
+    <h1>Alphabet</h1>
+
+    <div id="alphabet"></div>
+
+  </main>
+
+
+  <!-- unit 2: first words -->
+
+  <main id="first-words-page" hidden>
+
+    <div class="quiz">
+
+      <h1 id="question">
+        How do you say<br>"hello" in Darija?
+      </h1>
+
+      <div class="answers">
+
+        <button class="answer" data-answer="salam">
+          <span class="arabic">سلام</span>
+          <span class="latin">salam</span>
+        </button>
+
+        <button class="answer" data-answer="shukran">
+          <span class="arabic">شكرا</span>
+          <span class="latin">shukran</span>
+        </button>
+
+        <button class="answer" data-answer="bslama">
+          <span class="arabic">بسلامة</span>
+          <span class="latin">bslama</span>
+        </button>
+
+        <button class="answer" data-answer="fin">
+          <span class="arabic">فين</span>
+          <span class="latin">fin</span>
+        </button>
+
+      </div>
+
+      <p id="feedback">Select the correct answer</p>
+
+      <button id="continue-btn" hidden>Continue</button>
+
+    </div>
+
+  </main>
+
+
+  <!-- navigation -->
+
+  <nav class="navigation" id="navigation" hidden>
+
+    <button class="nav-button" onclick="showPage('welcome-page')">
+      Home
+    </button>
+
+    <button class="nav-button" onclick="showPage('unit-selection')">
+      Back
+    </button>
+
+  </nav>
+
+
+  <!-- scripts -->
+
+  <script src="data.js"></script>
+
+  <script src="script.js"></script>
 
 </body>
 
