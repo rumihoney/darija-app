@@ -1,6 +1,12 @@
+/*hiding the buttons in welcome page*/
+[hidden] {
+  display: none !important;
+}
+
 /* fonts */
 
-/* free of use*/
+/* free to use */
+
 @font-face {
   font-family: "Tajamuka";
   src: url("./fonts/Tajamuka Script.ttf") format("truetype");
@@ -8,12 +14,13 @@
 }
 
 @font-face {
-    font-family: "Blaka";
-    src: url("./fonts/blaka-ink-regular.ttf") format("truetype");
-    font-display: block;
+  font-family: "Blaka";
+  src: url("./fonts/blaka-ink-regular.ttf") format("truetype");
+  font-display: block;
 }
 
-/* need to pay license for commercial use*/
+/* requires commercial license */
+
 @font-face {
   font-family: "Lemon Brush";
   src: url("./fonts/LemonBrushRegular.otf") format("opentype");
@@ -21,18 +28,21 @@
 }
 
 @font-face {
-    font-family: "Retro Brush";
-    src: url("./fonts/RetroBrushRegular.otf") format("opentype");
-    font-display: block;
+  font-family: "Retro Brush";
+  src: url("./fonts/RetroBrushRegular.otf") format("opentype");
+  font-display: block;
 }
+
 
 /* general */
 
 body {
   margin: 0;
+  min-height: 100vh;
+
   background: #000;
   color: #f4eddf;
-  min-height: 100vh;
+
   overflow-x: hidden;
   overflow-y: auto;
 
@@ -45,7 +55,11 @@ body {
 
 h1 {
   font-size: clamp(45px, 7vw, 80px);
-  margin: 0 0 25px 0;
+  margin: 0 0 25px;
+}
+
+button {
+  font-family: "Tajamuka", serif;
 }
 
 
@@ -53,12 +67,13 @@ h1 {
 
 .welcome {
   width: min(600px, 92vw);
+  padding: 50px;
+
   text-align: center;
 
   border: 10px solid #12e034;
   border-radius: 20px;
 
-  padding: 50px;
   box-sizing: border-box;
 }
 
@@ -68,18 +83,19 @@ h1 {
 }
 
 .welcome-translation {
+  margin: 20px 0 30px;
+  gap: 10px;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  gap: 10px;
-  margin: 20px 0 30px;
 }
 
 .welcome-arabic {
   font-family: "Lemon Brush", sans-serif;
   font-size: 100px;
+
   color: #f0188f;
 
   line-height: 1.5;
@@ -91,6 +107,7 @@ h1 {
 .welcome-latin {
   font-family: "Tajamuka", serif;
   font-size: 65px;
+
   color: #ec419f;
 
   line-height: 1;
@@ -108,23 +125,28 @@ h1 {
   font-family: "Tajamuka", serif;
   font-size: 40px;
 
+  background: #000;
   color: #f4eddf;
-  text-decoration: none;
 
   border: 3px solid #f0188f;
   border-radius: 20px;
 
   padding: 10px 35px;
+
+  cursor: pointer;
 }
 
 .start-button:hover {
   background: #f0188f;
+  color: #f4eddf;
 }
+
 
 /* navigation */
 
 .navigation {
   position: fixed;
+
   bottom: 20px;
   left: 20px;
   right: 20px;
@@ -155,21 +177,153 @@ h1 {
   background: #f0188f;
 }
 
+
+/* units page */
+
+.units-page {
+  width: min(700px, 92vw);
+  text-align: center;
+}
+
+.units-page h1 {
+  font-size: 70px;
+  margin: 0 0 30px;
+}
+
+.unit-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.unit {
+  min-height: 120px;
+  padding: 20px;
+
+  background: #000;
+  color: #f4eddf;
+
+  font-family: "Tajamuka", serif;
+
+  border: 3px solid #f0188f;
+  border-radius: 20px;
+
+  text-decoration: none;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.unit span {
+  font-size: 25px;
+}
+
+.unit strong {
+  font-size: 40px;
+  font-weight: normal;
+}
+
+.unit:hover {
+  background: #f0188f;
+}
+
+.unit.locked {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.unit.locked small {
+  font-size: 20px;
+}
+
+
+/* alphabet page */
+
+.alphabet-page {
+  width: min(900px, 92vw);
+  padding: 30px 0 100px;
+
+  text-align: center;
+
+  box-sizing: border-box;
+}
+
+.alphabet-page h1 {
+  font-size: 70px;
+  margin: 0 0 30px;
+}
+
+#alphabet {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.letter-card {
+  min-height: 200px;
+  padding: 20px;
+
+  background: #000;
+  color: #f4eddf;
+
+  border: 3px solid #f0188f;
+  border-radius: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  box-sizing: border-box;
+}
+
+.letter-card .arabic {
+  height: auto;
+
+  font-size: 70px;
+  line-height: 1.5;
+
+  margin: 0 0 10px;
+}
+
+.letter-card .latin {
+  font-family: "Tajamuka", serif;
+  font-size: 35px;
+
+  line-height: 1.5;
+  margin: 0;
+}
+
+.ipa {
+  font-family: Arial, sans-serif;
+  font-size: 22px;
+
+  color: #8dc9f1;
+
+  margin-top: 10px;
+}
+
+
 /* quiz page */
 
 .quiz {
   width: min(600px, 92vw);
+  padding: 20px;
+
   text-align: center;
 
   border: 10px solid #12e034;
   border-radius: 20px;
 
-  padding: 20px;
   box-sizing: border-box;
 }
-
-
-/* answers */
 
 .answers {
   display: grid;
@@ -178,12 +332,11 @@ h1 {
 }
 
 .answer {
-  background: #000;
-  color: #f4eddf;
-
   min-height: 160px;
   padding: 15px 20px;
-  box-sizing: border-box;
+
+  background: #000;
+  color: #f4eddf;
 
   border: 3px solid;
   border-radius: 20px;
@@ -193,6 +346,7 @@ h1 {
   justify-content: center;
   align-items: center;
 
+  box-sizing: border-box;
   cursor: pointer;
 }
 
@@ -200,19 +354,16 @@ h1 {
   background: #f0188f;
 }
 
-
-/* answer text */
-
 .arabic {
+  height: 90px;
+
   font-family: "Lemon Brush", sans-serif;
   font-size: clamp(45px, 6vw, 70px);
   font-weight: normal;
 
-  height: 90px;
-
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 
   line-height: 1;
 }
@@ -230,7 +381,7 @@ h1 {
 
 #feedback {
   font-size: clamp(25px, 3vw, 35px);
-  margin: 15px 0 0 0;
+  margin: 15px 0 0;
 }
 
 
@@ -257,62 +408,34 @@ h1 {
 }
 
 
-/* units page */
+/* coming soon page */
 
-.units-page {
-  width: min(700px, 92vw);
+.coming-soon {
+  width: min(600px, 92vw);
+  padding: 50px;
+
   text-align: center;
-}
 
-.units-page h1 {
-  font-size: 70px;
-  margin: 0 0 30px 0;
-}
-
-.unit-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-}
-
-.unit {
-  background: #000;
-  color: #f4eddf;
-
-  min-height: 120px;
-  padding: 20px;
-  box-sizing: border-box;
-
-  border: 3px solid #f0188f;
+  border: 10px solid #12e034;
   border-radius: 20px;
 
-  text-decoration: none;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  box-sizing: border-box;
 }
 
-.unit span {
-  font-size: 25px;
+.coming-soon h1 {
+  font-size: 90px;
+  color: #f0188f;
+
+  margin: 0 0 20px;
 }
 
-.unit strong {
+.coming-soon p {
   font-size: 40px;
-  font-weight: normal;
+  margin: 20px 0;
 }
 
-.unit:hover {
-  background: #f0188f;
-}
-
-.unit.locked {
-  opacity: 0.4;
-}
-
-.unit.locked small {
-  font-size: 20px;
+.coming-soon-small {
+  color: #f0188f;
 }
 
 
@@ -336,123 +459,6 @@ h1 {
     font-size: 50px;
   }
 
-  .quiz {
-    padding: 15px;
-  }
-
-  .answers {
-    gap: 12px;
-  }
-
-  .answer {
-    min-height: 140px;
-    padding: 10px 15px;
-  }
-}
-
-/* coming soon page */
-
-.coming-soon {
-  width: min(600px, 92vw);
-
-  text-align: center;
-
-  border: 10px solid #12e034;
-  border-radius: 20px;
-
-  padding: 50px;
-
-  box-sizing: border-box;
-}
-
-.coming-soon h1 {
-  font-size: 90px;
-
-  color: #f0188f;
-
-  margin: 0 0 20px;
-}
-
-.coming-soon p {
-  font-size: 40px;
-
-  margin: 20px 0;
-}
-
-.coming-soon-small {
-  color: #f0188f;
-}
-
-/* alphabet page */
-
-.alphabet-page {
-  width: min(900px, 92vw);
-  text-align: center;
-
-  padding: 30px 0 100px;
-  box-sizing: border-box;
-}
-
-.alphabet-page h1 {
-  font-size: 70px;
-  margin: 0 0 30px;
-}
-
-#alphabet {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-
-  width: 100%;
-}
-
-.letter-card {
-  background: #000;
-  color: #f4eddf;
-
-  min-height: 200px;
-  padding: 20px;
-
-  border: 3px solid #f0188f;
-  border-radius: 20px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  box-sizing: border-box;
-}
-
-.letter-card .arabic {
-  height: auto;
-  font-size: 70px;
-  line-height: 1.5;
-
-  margin: 0 0 10px;
-}
-
-.letter-card .latin {
-  font-family: "Tajamuka", serif;
-  font-size: 35px;
-  line-height: 1.5;
-
-  margin: 0;
-}
-
-.ipa {
-  font-family: Arial, sans-serif;
-  font-size: 22px;
-  color: #8dc9f1;
-
-  margin-top: 10px;
-}
-
-
-/* responsive alphabet */
-
-@media (max-width: 700px) {
-
   #alphabet {
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
@@ -469,6 +475,19 @@ h1 {
 
   .letter-card .latin {
     font-size: 30px;
+  }
+
+  .quiz {
+    padding: 15px;
+  }
+
+  .answers {
+    gap: 12px;
+  }
+
+  .answer {
+    min-height: 140px;
+    padding: 10px 15px;
   }
 
 }

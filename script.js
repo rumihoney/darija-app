@@ -79,8 +79,6 @@ if (alphabetContainer) {
 
 }
 
-// page navigation
-
 function showPage(pageId) {
 
   document.querySelectorAll("main").forEach(function(page) {
@@ -96,5 +94,4 @@ function showPage(pageId) {
   } else {
     navigation.hidden = false;
   }
-
 }
