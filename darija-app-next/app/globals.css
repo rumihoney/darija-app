@@ -1,35 +1,26 @@
-/*hiding the buttons in welcome page*/
-[hidden] {
-  display: none !important;
-}
-
 /* fonts */
-
-/* free to use */
 
 @font-face {
   font-family: "Tajamuka";
-  src: url("./fonts/Tajamuka Script.ttf") format("truetype");
+  src: url("/fonts/Tajamuka Script.ttf") format("truetype");
   font-display: block;
 }
 
 @font-face {
   font-family: "Blaka";
-  src: url("./fonts/blaka-ink-regular.ttf") format("truetype");
+  src: url("/fonts/blaka-ink-regular.ttf") format("truetype");
   font-display: block;
 }
 
-/* requires commercial license */
-
 @font-face {
   font-family: "Lemon Brush";
-  src: url("./fonts/LemonBrushRegular.otf") format("opentype");
+  src: url("/fonts/LemonBrushRegular.otf") format("opentype");
   font-display: block;
 }
 
 @font-face {
   font-family: "Retro Brush";
-  src: url("./fonts/RetroBrushRegular.otf") format("opentype");
+  src: url("/fonts/RetroBrushRegular.otf") format("opentype");
   font-display: block;
 }
 
@@ -47,27 +38,14 @@ body {
   overflow-y: auto;
 
   font-family: "Tajamuka", serif;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
-
-h1 {
-  font-size: clamp(45px, 7vw, 80px);
-  margin: 0 0 25px;
-}
-
-button {
-  font-family: "Tajamuka", serif;
-}
-
 
 /* welcome page */
 
 .welcome {
   width: min(600px, 92vw);
   padding: 50px;
+  margin: 50px auto;
 
   text-align: center;
 
@@ -95,7 +73,6 @@ button {
 .welcome-arabic {
   font-family: "Lemon Brush", sans-serif;
   font-size: 100px;
-
   color: #f0188f;
 
   line-height: 1.5;
@@ -107,7 +84,6 @@ button {
 .welcome-latin {
   font-family: "Tajamuka", serif;
   font-size: 65px;
-
   color: #ec419f;
 
   line-height: 1;
@@ -120,8 +96,6 @@ button {
 }
 
 .start-button {
-  display: inline-block;
-
   font-family: "Tajamuka", serif;
   font-size: 40px;
 
@@ -132,87 +106,22 @@ button {
   border-radius: 20px;
 
   padding: 10px 35px;
-
   cursor: pointer;
 }
 
 .start-button:hover {
   background: #f0188f;
-  color: #f4eddf;
-}
-
-
-/* navigation */
-
-.bottom-nav {
-  position: fixed;
-
-  bottom: 0;
-  left: 0;
-  right: 0;
-
-  height: 85px;
-
-  background: #000;
-
-  border-top: 3px solid #f0188f;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  gap: 40px;
-
-  z-index: 100;
-}
-
-.bottom-nav-button {
-  min-width: 100px;
-
-  background: #000;
-  color: #f4eddf;
-
-  border: none;
-
-  font-family: "Tajamuka", serif;
-  font-size: 24px;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  gap: 2px;
-
-  cursor: pointer;
-}
-
-.nav-icon {
-  font-size: 28px;
-}
-
-.bottom-nav-button:hover {
-  color: #f0188f;
-}
-
-.bottom-nav-button.active {
-  color: #12e034;
-}
-
-.page-content {
-  width: min(700px, 92vw);
-  text-align: center;
 }
 
 /* units page */
 
 .units-page {
   width: min(700px, 92vw);
-  text-align: center;
-}
 
-.units-page h1 {
-  font-size: 70px;
-  margin: 0 0 30px;
+  margin: 40px auto;
+  padding-bottom: 100px;
+
+  text-align: center;
 }
 
 .unit-list {
@@ -232,8 +141,6 @@ button {
 
   border: 3px solid #f0188f;
   border-radius: 20px;
-
-  text-decoration: none;
 
   display: flex;
   flex-direction: column;
@@ -270,14 +177,85 @@ button {
   font-size: 20px;
 }
 
+/* back button */
+
+.back-button {
+  position: fixed;
+
+  bottom: 80px;
+  right: 20px;
+
+  font-family: "Tajamuka", serif;
+  font-size: 30px;
+
+  background: #000;
+  color: #f4eddf;
+
+  border: 3px solid #f0188f;
+  border-radius: 15px;
+
+  padding: 5px 20px;
+
+  cursor: pointer;
+  z-index: 100;
+}
+
+.back-button:hover {
+  background: #f0188f;
+}
+
+
+/* bottom navigation */
+
+.bottom-nav {
+  position: fixed;
+
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  height: 60px;
+
+  background: #000;
+  border-top: 3px solid #f0188f;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 50px;
+
+  z-index: 100;
+}
+
+.bottom-nav-button {
+  background: #000;
+  color: #f4eddf;
+
+  border: none;
+
+  font-family: "Tajamuka", serif;
+  font-size: 28px;
+
+  cursor: pointer;
+}
+
+.bottom-nav-button:hover {
+  color: #f0188f;
+}
+
+.bottom-nav-button.active {
+  color: #12e034;
+}
+
 /* alphabet page */
 
 .alphabet-page {
   width: min(900px, 92vw);
-  padding: 30px 0 100px;
+  margin: 30px auto;
+  padding-bottom: 100px;
 
   text-align: center;
-
   box-sizing: border-box;
 }
 
@@ -291,6 +269,7 @@ button {
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+
   gap: 20px;
 }
 
@@ -313,12 +292,11 @@ button {
 }
 
 .letter-card .arabic {
-  height: auto;
-
+  font-family: "Lemon Brush", sans-serif;
   font-size: 70px;
-  line-height: 1.5;
 
-  margin: 0 0 10px;
+  line-height: 1.5;
+  margin-bottom: 10px;
 }
 
 .letter-card .latin {
@@ -326,23 +304,45 @@ button {
   font-size: 35px;
 
   line-height: 1.5;
-  margin: 0;
 }
 
-.ipa {
+.letter-card .ipa {
   font-family: Arial, sans-serif;
   font-size: 22px;
 
   color: #8dc9f1;
-
   margin-top: 10px;
 }
 
+
+/* alphabet mobile */
+
+@media (max-width: 700px) {
+
+  #alphabet {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .letter-card {
+    min-height: 180px;
+    padding: 15px;
+  }
+
+  .letter-card .arabic {
+    font-size: 60px;
+  }
+
+  .letter-card .latin {
+    font-size: 30px;
+  }
+}
 
 /* quiz page */
 
 .quiz {
   width: min(600px, 92vw);
+  margin: 40px auto;
   padding: 20px;
 
   text-align: center;
@@ -351,6 +351,11 @@ button {
   border-radius: 20px;
 
   box-sizing: border-box;
+}
+
+.quiz h1 {
+  font-size: clamp(45px, 7vw, 80px);
+  margin: 0 0 25px;
 }
 
 .answers {
@@ -382,12 +387,11 @@ button {
   background: #f0188f;
 }
 
-.arabic {
+.answer .arabic {
   height: 90px;
 
   font-family: "Lemon Brush", sans-serif;
   font-size: clamp(45px, 6vw, 70px);
-  font-weight: normal;
 
   display: flex;
   justify-content: center;
@@ -396,7 +400,7 @@ button {
   line-height: 1;
 }
 
-.latin {
+.answer .latin {
   font-family: "Tajamuka", serif;
   font-size: clamp(32px, 4vw, 50px);
 
@@ -404,145 +408,7 @@ button {
   margin-top: 5px;
 }
 
-
-/* feedback */
-
 #feedback {
   font-size: clamp(25px, 3vw, 35px);
   margin: 15px 0 0;
-}
-
-
-/* continue button */
-
-#continue-btn {
-  font-family: "Tajamuka", serif;
-  font-size: clamp(28px, 3vw, 35px);
-
-  background: #000;
-  color: #f4eddf;
-
-  border: 3px solid #f4eddf;
-  border-radius: 20px;
-
-  padding: 8px 30px;
-  margin-top: 15px;
-
-  cursor: pointer;
-}
-
-/* lesson back button */
-
-.lesson-back {
-  position: fixed;
-  bottom: 105px;
-  right: 20px;
-
-  font-family: "Tajamuka", serif;
-  font-size: 30px;
-
-  background: #000;
-  color: #f4eddf;
-
-  border: 3px solid #f0188f;
-  border-radius: 15px;
-
-  padding: 5px 20px;
-
-  cursor: pointer;
-
-  z-index: 100;
-}
-
-.lesson-back:hover {
-  background: #f0188f;
-}
-
-#continue-btn:hover {
-  background: #f0188f;
-}
-
-
-/* coming soon page */
-
-.coming-soon {
-  width: min(600px, 92vw);
-  padding: 50px;
-
-  text-align: center;
-
-  border: 10px solid #12e034;
-  border-radius: 20px;
-
-  box-sizing: border-box;
-}
-
-.coming-soon h1 {
-  font-size: 90px;
-  color: #f0188f;
-
-  margin: 0 0 20px;
-}
-
-.coming-soon p {
-  font-size: 40px;
-  margin: 20px 0;
-}
-
-.coming-soon-small {
-  color: #f0188f;
-}
-
-
-/* responsive */
-
-@media (max-width: 700px) {
-
-  .welcome {
-    padding: 25px;
-  }
-
-  .welcome-translation {
-    gap: 3px;
-  }
-
-  .welcome-arabic {
-    font-size: 75px;
-  }
-
-  .welcome-latin {
-    font-size: 50px;
-  }
-
-  #alphabet {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-  }
-
-  .letter-card {
-    min-height: 180px;
-    padding: 15px;
-  }
-
-  .letter-card .arabic {
-    font-size: 60px;
-  }
-
-  .letter-card .latin {
-    font-size: 30px;
-  }
-
-  .quiz {
-    padding: 15px;
-  }
-
-  .answers {
-    gap: 12px;
-  }
-
-  .answer {
-    min-height: 140px;
-    padding: 10px 15px;
-  }
-
 }

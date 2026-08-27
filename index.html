@@ -42,55 +42,55 @@
 
   <!-- unit selection -->
 
-  <main class="units-page" id="unit-selection" hidden>
+<main class="units-page" id="unit-selection" hidden>
 
-    <h1>Choose a Unit</h1>
+  <h1>Choose a Unit</h1>
 
-    <div class="unit-list">
+  <div class="unit-list">
 
-      <button class="unit" onclick="showPage('alphabet-page')">
-        <span>Unit 1</span>
-        <strong>Alphabet</strong>
-      </button>
+    <button class="unit" onclick="showPage('alphabet-page')">
+      <span>Unit 1</span>
+      <strong>Alphabet</strong>
+    </button>
 
-      <button class="unit" onclick="showPage('first-words-page')">
-        <span>Unit 2</span>
-        <strong>First Words</strong>
-      </button>
+    <button class="unit" onclick="showPage('first-words-page')">
+      <span>Unit 2</span>
+      <strong>First Words</strong>
+    </button>
 
-      <div class="unit locked">
-        <span>Unit 3</span>
-        <strong>People</strong>
-        <small>Coming soon</small>
-      </div>
-
-      <div class="unit locked">
-        <span>Unit 4</span>
-        <strong>Food & Drink</strong>
-        <small>Coming soon</small>
-      </div>
-
-      <div class="unit locked">
-        <span>Unit 5</span>
-        <strong>Everyday Darija</strong>
-        <small>Coming soon</small>
-      </div>
-
-      <div class="unit locked">
-        <span>Unit 6</span>
-        <strong>Home</strong>
-        <small>Coming soon</small>
-      </div>
-
-      <div class="unit locked">
-        <span>Unit 7</span>
-        <strong>Shopping</strong>
-        <small>Coming soon</small>
-      </div>
-
+    <div class="unit locked">
+      <span>Unit 3</span>
+      <strong>People</strong>
+      <small>Coming soon</small>
     </div>
 
-  </main>
+    <div class="unit locked">
+      <span>Unit 4</span>
+      <strong>Food & Drink</strong>
+      <small>Coming soon</small>
+    </div>
+
+    <div class="unit locked">
+      <span>Unit 5</span>
+      <strong>Everyday Darija</strong>
+      <small>Coming soon</small>
+    </div>
+
+    <div class="unit locked">
+      <span>Unit 6</span>
+      <strong>Home</strong>
+      <small>Coming soon</small>
+    </div>
+
+    <div class="unit locked">
+      <span>Unit 7</span>
+      <strong>Shopping</strong>
+      <small>Coming soon</small>
+    </div>
+
+  </div>
+
+</main>
 
 
   <!-- unit 1: alphabet -->
@@ -146,23 +146,63 @@
 
   </main>
 
+  <!-- review page -->
+
+<main id="review-page" hidden>
+
+  <div class="page-content">
+    <h1>Review</h1>
+
+    <p>
+      Flashcards and difficult words will appear here.
+    </p>
+  </div>
+
+</main>
+
+
+<!-- profile page -->
+
+<main id="profile-page" hidden>
+
+  <div class="page-content">
+    <h1>Profile</h1>
+
+    <p>🔥 0 day streak</p>
+    <p>0 words learned</p>
+    <p>0 units completed</p>
+  </div>
+
+</main>
+
+<!-- lesson back button -->
+
+<button
+  id="lesson-back"
+  class="lesson-back"
+  onclick="showPage('unit-selection')"
+  hidden
+>
+  Back
+</button>
 
   <!-- navigation -->
 
-<nav class="navigation" id="navigation" hidden>
+    <nav class="bottom-nav" id="bottom-nav" hidden>
 
-  <button class="nav-button" onclick="showPage('welcome-page')">
-    Home
+        <button class="bottom-nav-button active" onclick="showPage('unit-selection', this)">
+            <span>Learn</span>
+        </button>
 
-  </button>
+        <button class="bottom-nav-button active" onclick="showPage('review-page', this)">
+            <span>Review</span>
+        </button>
 
-  <button class="nav-button" onclick="showPage('unit-selection')">
-    Back
-
-  </button>
-
-</nav>
-
+        <button class="bottom-nav-button active" onclick="showPage('orofile-page', this)">
+            <span>Profile</span>
+        </button>
+    
+    </nav>
 
   <!-- scripts -->
 

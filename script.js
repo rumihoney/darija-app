@@ -79,7 +79,9 @@ if (alphabetContainer) {
 
 }
 
-function showPage(pageId) {
+// page navigation
+
+function showPage(pageId, clickedButton = null) {
 
   document.querySelectorAll("main").forEach(function(page) {
     page.hidden = true;
@@ -87,11 +89,36 @@ function showPage(pageId) {
 
   document.getElementById(pageId).hidden = false;
 
-  const navigation = document.getElementById("navigation");
+  const bottomNav = document.getElementById("bottom-nav");
+  const lessonBack = document.getElementById("lesson-back");
 
+  // welcome page
   if (pageId === "welcome-page") {
-    navigation.hidden = true;
-  } else {
-    navigation.hidden = false;
+    bottomNav.hidden = true;
+    lessonBack.hidden = true;
+  }
+
+  // learn / review / profile pages
+  else if (
+    pageId === "unit-selection" ||
+    pageId === "review-page" ||
+    pageId === "profile-page"
+  ) {
+    bottomNav.hidden = false;
+    lessonBack.hidden = true;
+  }
+
+  // individual units
+  else {
+    bottomNav.hidden = false;
+    lessonBack.hidden = false;
+  }
+
+  document.querySelectorAll(".bottom-nav-button").forEach(function(button) {
+    button.classList.remove("active");
+  });
+
+  if (clickedButton) {
+    clickedButton.classList.add("active");
   }
 }
