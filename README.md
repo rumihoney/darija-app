@@ -32,7 +32,5 @@ Growing up abroad, I started forgetting Darija myself, so this project is also a
 
 - Welcome page, unit 1 & 2 implemented
 - Darija Phonology added 
-- Additional units in development
-- More vocabulary and lessons coming soon
-- Arabic script lessons planned
-- Pronunciation audio planned
+- Additional units and app architecture in development
+
